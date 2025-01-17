@@ -1,0 +1,94 @@
+<div class="infobox">
+	<table class="unstyled">
+		<tr>
+			<td class="infobox-name" colspan="2">
+				{{ .name }}
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				{{ if (fileExists (delimit (slice "static/assets/img/addons/" .id ".png") "")) -}}
+					<img src="/assets/img/addons/{{ .id }}.png" alt="{{ .name }}" class="infobox-img">
+				{{- end }}
+			</td>
+		</tr>
+		<tr>
+			<td class="infobox-label">{{ T "AddonDocs.Infobox.Labels.ID" }}</td>
+			<td class="infobox-data">{{ .id }}</td>
+		</tr>
+		<tr>
+			<td class="infobox-label">{{ T "AddonDocs.Infobox.Labels.Description" }}</td>
+			<td class="infobox-data">{{ .description }}</td>
+		</tr>
+		<tr>
+			<td class="infobox-label">{{ T "AddonDocs.Infobox.Labels.Credits" }}</td>
+			<td class="infobox-data">
+				<ul>{{ range .credits }}
+					<li>
+						{{ if isset . "link" }}
+							<a href="{{ .link }}">{{ .name }}</a>
+						{{ else }}
+							{{ .name }}
+						{{ end }}
+						{{ with .note }}({{ . }}){{ end }}
+					</li>
+				{{ end }}</ul>
+			</td>
+		</tr>
+		<tr>
+			<td class="infobox-label">{{ T "AddonDocs.Infobox.Labels.Tags" }}</td>
+			<td class="infobox-data">
+				{{ range .tags }}
+					<span class="badge badge-primary">{{ . }}</span>
+				{{ end }}
+			</td>
+		</tr>
+		<tr>
+			<td class="infobox-label">{{ T "AddonDocs.Infobox.Labels.VersionAdded" }}</td>
+			<td class="infobox-data">{{ with .versionAdded }}{{ . }}{{ else }}No{{ end }}</td>
+		</tr>
+		{{ with .latestUpdate }}<tr>
+			<td class="infobox-label">{{ T "AddonDocs.Infobox.Labels.LatestUpdate" }}</td>
+			<td class="infobox-data">
+				{{ .version }}
+				{{ if .isMajor }}
+					<span class="badge badge-primary">{{ T "AddonDocs.Infobox.LatestUpdate.Major" }}</span>
+				{{ end }}
+			</td>
+		</tr>{{ end }}
+		{{ with .info }}<tr>
+			<td class="infobox-label">{{ T "AddonDocs.Infobox.Labels.Informations" }}</td>
+			<td class="infobox-data"><ul>
+				<!-- TODO: Do better way to display types -->
+				{{ range . }}
+					<li data-info-id="{{ .id }}">{{ if .type }}{{ .type }}: {{ end }}{{ .text }}</li>
+				{{ end }}
+			</ul></td>
+		</tr>{{ end }}
+		{{ if ( or .enabledByDefault .dynamicEnable .injectAsStyleElt .updateUserstylesOnSettingsChange ) }}<tr>
+			<td class="infobox-label">{{ T "AddonDocs.Infobox.Labels.FeatureFlags" }}</td>
+			<td class="infobox-data">
+				{{ with .enabledByDefault }}
+				<span class="badge badge-primary">{{ T "AddonDocs.Infobox.FeatureFlags.enabledByDefault" }}</span>
+				{{ end }}
+				{{ with .dynamicEnable }}
+				<span class="badge badge-primary">{{ T "AddonDocs.Infobox.FeatureFlags.dynamicEnable" }}</span>
+				{{ end }}
+				{{ with .dynamicDisable }}
+				<span class="badge badge-primary">{{ T "AddonDocs.Infobox.FeatureFlags.dynamicDisable" }}</span>
+				{{ end }}
+				{{ with .injectAsStyleElt }}
+				<span class="badge badge-primary">{{ T "AddonDocs.Infobox.FeatureFlags.injectAsStyleElt" }}</span>
+				{{ end }}
+				{{ with .updateUserstylesOnSettingsChange }}
+				<span class="badge badge-primary">{{ T "AddonDocs.Infobox.FeatureFlags.updateUserstylesOnSettingsChange" }}</span>
+				{{ end }}
+			</td>
+		</tr>{{ end }}
+		<tr>
+			<td class="infobox-data" colspan="2">
+				<a href='https://github.com/ScratchAddons/ScratchAddons/tree/master/addons/{{ .id }}' rel="noopener">{{ T "AddonDocs.Infobox.Links.SourceCode" }}</a> · <a href='https://scratch.mit.edu/scratch-addons-extension/settings#addon-{{ .id }}' rel="noopener">{{ T "AddonDocs.Infobox.Links.SASettings" }}</a>
+			</td>
+		</tr>
+	</table>
+</div>

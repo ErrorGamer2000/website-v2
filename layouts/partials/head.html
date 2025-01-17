@@ -1,6 +1,18 @@
 <!-- Title and Meta -->
 
-<title>{{ if ne .IsHome true }}{{ .Title }} - {{ end }}{{ T ( $.Param "section_site_name" ) }}</title>
+{{ .Scratch.Set "site" ( T ( $.Param "section_site_name" ) ) -}}
+
+{{ if not ( .Scratch.Get "title" ) -}}
+	{{ .Scratch.Set "title" .Title -}}
+{{ end }}
+{{ .Scratch.Set "title_page" (printf "%s - %s" ( .Scratch.Get "title" ) ( .Scratch.Get "site" ) ) -}}
+{{ .Scratch.Set "title_social" ( .Scratch.Get "title" ) -}}
+{{ if or (eq .IsHome true) (eq .Params.section_root true) -}}
+	{{ .Scratch.Set "title_social" ( .Scratch.Get "site" ) -}}
+	{{ .Scratch.Set "title_page" ( .Scratch.Get "site" ) -}}
+{{ end -}}
+
+<title>{{ .Scratch.Get "title_page" }}</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="description" content="{{ .Description }}" />
@@ -10,34 +22,48 @@
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:title" content='{{ if ne .IsHome "true" }}{{ .Title }}{{ else }}{{ T ( $.Param "section_site_name" ) }}{{ end }}' />
+<meta property="og:title" content='{{ .Scratch.Get "title_social" }}' />
 <meta property="og:description" content="{{ .Description }}">
-<meta property="og:site_name" content='{{ T ( $.Param "section_site_name" ) }}' />
+<meta property="og:site_name" content='{{ .Scratch.Get "site" }}' />
 <meta property="og:locale" content="{{ .Site.Language.Lang }}" />
+{{ if isset .Params "cover_image" }}
+<meta property="og:image" content="{{ .Params.cover_image }}" />
+<meta property="og:image:alt" content="{{ .Params.cover_image_alt }}" />
+{{ else }}
 <meta property="og:image" content="https://scratchaddons.com/assets/img/icon-square.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="384" />
 <meta property="og:image:height" content="384" />
 <meta property="og:image:alt" content='{{ T "Global.LogoAlt" }}' />
+{{ end }}
 
 <meta name="twitter:card" content="summary" />
-<!-- <meta name="twitter:site" content="@ScratchAddons" />
-<meta name="twitter:creator" content="@ScratchAddons" /> -->
+<meta name="twitter:site" content="@ScratchAddons" />
+<meta name="twitter:creator" content="@ScratchAddons" />
 <meta name="twitter:url" content="{{ .Permalink }}" />
-<meta name="twitter:title" content='{{ if ne .IsHome "true" }}{{ .Title }} - {{ end }}{{ T ( $.Param "section_site_name" ) }}' />
+<meta name="twitter:title" content='{{ .Scratch.Get "title_page" }}' />
 <meta name="twitter:description" content="{{ .Description }}" />
+{{ if isset .Params "cover_image" }}
+<meta name="twitter:image" content="{{ .Params.cover_image }}" />
+<meta name="twitter:image:alt" content='{{ .Params.cover_image_alt }}' />
+{{ else }}
 <meta name="twitter:image" content="https://scratchaddons.com/assets/img/icon-square.png" />
 <meta name="twitter:image:alt" content='{{ T "Global.LogoAlt" }}' />
+{{ end }}
+
+{{ range .AlternativeOutputFormats -}}
+{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink (T ( $.Param "section_site_name" )) | safeHTML }}
+{{ end }}
 
 {{ if .IsTranslated }}{{ range .Translations }}{{ if or ( eq .IsHome false ) ( in $.Site.Data.translatedindex .Language.Lang ) -}}
 <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
 {{- end }}{{ end }}{{ end }}
 
 <!-- Require Script and Loading Page -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" crossorigin />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin />
 {{ partial "scss" "assets/css/base.scss" }}
 
-<script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@1.0.7" crossorigin></script>
+<script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1/dist/jquery.slim.min.js,npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@3.0.1" crossorigin></script>
 <script async src="/assets/js/website-base.js"></script>
 
 {{ if not ( and ( isset .Params "no_analytics" ) ( eq .Params.no_analytics true ) ) }}

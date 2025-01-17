@@ -54,7 +54,7 @@
   Date: 2020-10-27
   Status: Yanked
   Entry: |
-    Only released on Firefox due to an issue with perfomance warnings not showing. See [v1.2.1](#v1.2.1).
+    Only released on Firefox due to an issue with performance warnings not showing. See [v1.2.1](#v1.2.1).
 
 - Version: v1.2.1
   Index: 5
@@ -458,7 +458,7 @@
     - New setting on "show full areas" addon: show scroll for forums Scratchblocks
     - "Developer tools" addon: fix send to top/bottom buttons showing on all items, instead of just costumes
     -  "Mute project player" addon: fix Ctrl+GreenFlag not working in MacOS
-    - "Auto-hide block pallete" addon: fix closing animation sometimes not working
+    - "Auto-hide block palette" addon: fix closing animation sometimes not working
   Highlights:
     Description: |
       New feature: "Drag and drop files" addon, which lets you drag images and sounds from your file explorer into the sprites pane or costume/sound list. Go to Scratch Addons settings to enable it.
@@ -503,7 +503,7 @@
     - Bug fix: "variable manager" not loading when reentering the editor
   Highlights:
     Description: |
-      New feature: "editor dark mode" was remade and is now deeply customizable. Go to Scratch Addons settings to change specific colors, toggle dark comments and scollbars, and more!
+      New feature: "editor dark mode" was remade and is now deeply customizable. Go to Scratch Addons settings to change specific colors, toggle dark comments and scrollbars, and more!
 
       Featured new addons this update are "custom scripts area zoom settings" and "change new sprite default position".
 
@@ -774,7 +774,7 @@
     - "Featured" addons are now displayed separately in settings page
     - Ability to send list of enabled addons when sending feedback to Scratch Addons developers
     - Bug fix: "customizable default project" working inconsistently
-    - Bug fix: "display stage on left side" breaking trashing of blocks by dragging them to pallete in RTL languages
+    - Bug fix: "display stage on left side" breaking trashing of blocks by dragging them to palette in RTL languages
     - Bug fix: addons sometimes not loading in the page randomly
   Highlights:
     Description: |
@@ -1021,3 +1021,790 @@
   Entry: |
     - Bug fix: addons not working on forum topics if "more forum toolbar buttons" addon enabled
     - Bug fix: editor addons sometimes not loaded
+
+- Version: v1.25.0
+  Index: 63
+  Tag: v1.25.0
+  Name: v1.25.0
+  Date: 2022-03-15
+  Status: Released
+  Entry: |
+    - New addon: color picker inputs
+    - New addon: horizontal tabs on My Stuff
+    - New addon: live forum post preview
+    - "Muted project player mode" addon: allow macOS users to use Cmd instead of Ctrl
+    - "Message count on extension icon" addon: new "orange" preset
+    - Settings page: show "no results found" message when searching
+    - Bug fix: "Scratch Messaging" crashing when comment not found
+    - Bug fix: "hide new variables" affecting performance
+    - Bug fix: "debugger" breakpoints sometimes not working
+    - Bug fix: "profile statistics" showing wrong date
+    - Bug fix: "more forum toolbar buttons" not working on signature settings page
+  Highlights:
+    Description: |
+      New addon: "color picker inputs", which allows setting an exact value (0-100) for each slider in the costume editor color picker. Go to Scratch Addons settings to enable it.
+
+      Other new addons added this update are "horizontal tabs on My Stuff" and "live forum post preview".
+    YouTubeID: XRCeR56ZLUE
+
+- Version: v1.25.1
+  Index: 64
+  Tag: v1.25.1
+  Name: v1.25.1
+  Date: 2022-03-27
+  Status: Released
+  Entry: |
+    - Adapt addons to the upcoming Scratch April Fools update
+
+- Version: v1.26.0
+  Index: 65
+  Tag: v1.26.0
+  Name: v1.26.0
+  Date: 2022-05-22
+  Status: Released
+  Entry: |
+    - New addon: customizable default costume editor colors [beta]
+    - New addon: sound duration display
+    - New ability to view the internal Scratch Addons settings file, available inside "more settings" in the settings page
+    - Addons such as "sprite folders" and "unshare button in editor" now use Scratch modals instead of browser prompts when asking for input or confirmation
+    - "Scratch 2.0 → 3.0" addon: style profile page scrollbars and alerts
+    - "Website dark mode and customizable colors" addon: add dark mode to more parts of the website
+    - Bug fix: "website dark mode and customizable colors" changing text color on project stage
+    - Bug fix: "forum search" not working in majority of cases
+    - Bug fix: “Ctrl+Enter to post” not letting macOS users use Cmd key 
+    - Bug fix: "60FPS project player mode" causing variables to not visually update in some cases
+  Highlights:
+    Description: |
+      New addon: "customizable default costume editor colors", which lets you change the default colors and outline size used by the costume editor. Go to Scratch Addons settings to enable it.
+
+      Another new addon added in this update is "sound duration display", which adds a display to the sound editor that shows the total length and the elapsed time of the sound, or the selection within it.
+    YouTubeID: mTX1V9e6KK0
+
+- Version: v1.26.1
+  Index: 66
+  Tag: v1.26.1
+  Name: v1.26.1
+  Date: 2022-06-08
+  Status: Released
+  Entry: |
+    - Adapt addons to the upcoming Scratch update (unshared projects no longer being accessible by knowing the project ID)
+    - Fix outdated update notices showing up in settings
+
+- Version: v1.27.0
+  Index: 67
+  Tag: v1.27.0
+  Name: v1.27.0
+  Date: 2022-07-14
+  Status: Released
+  Entry: |
+    - New addon: hide stage and sprite pane
+    - New addon: reverse order of project controls
+    - New addon: one-click studio invites
+    - "Auto-hiding block palette" addon: fixed many bugs
+    - "Cloud games" addon: listed projects can now be customized
+    - "Sprite and script count" addon: new setting to show icons instead of text
+    - "Confirmations" addon: new "confirm cancelling comments" setting
+    - "Debugger" and "pause" addons: fix bugs, improve performance
+    - Bug fix: extension getting corrupted after importing settings
+    - Bug fix: "developer tools" find bar showing above the green flag in small windows
+    - Bug fix: "Scratch Messaging" showing messages already marked as read
+    - Bug fix: "grab single block with Ctrl key" glitching if Ctrl is held when using right click → duplicate
+    - Bug fix: "unshare button in editor" breaking the "Share" button after the project was unshared
+  Highlights:
+    Description: |
+      New addon: "hide stage and sprite pane", which adds a button that hides the stage and the sprite pane, making the code area much larger. Go to Scratch Addons settings to enable it.
+
+      Another new addon is "reverse order of project controls", which moves the green flag and stop buttons to the right and the full screen button to the left, like in Scratch 2.0. Also, you can now customize the projects shown on the cloud games tab.
+    YouTubeID: ostWH0KN4bM
+
+- Version: v1.27.1
+  Index: 68
+  Tag: v1.27.1
+  Name: v1.27.1
+  Date: 2022-07-17
+  Status: Released
+  Entry: |
+    - Bug fix: "auto-hide block palette" causing editor crash after clicking "make new block"
+    - Bug fix: "project progress bar" not working and showing a vertical bar
+
+- Version: v1.27.2
+  Index: 69
+  Tag: v1.27.2
+  Name: v1.27.2
+  Date: 2022-07-20
+  Status: Released
+  Entry: |
+    - Bug fix: "hide stage and sprite pane" crashing the page if "touching mouse pointer" block runs while the stage is hidden
+
+- Version: v1.27.3
+  Index: 70
+  Tag: v1.27.3
+  Name: v1.27.3
+  Date: 2022-07-22
+  Status: Released
+  Entry: |
+    - Bug fix: "hide stage and sprite pane" hiding the stage in project pages
+    - Bug fix: "auto-hide block palette" not updating workspace metrics after changing settings
+
+- Version: v1.28.0
+  Index: 71
+  Tag: v1.28.0
+  Name: v1.28.0
+  Date: 2022-08-30
+  Status: Released
+  Entry: |
+    - New addon: alternating nested block colors
+    - New addon: editor find bar (previously part of “developer tools”, it can now search sounds)
+    - New addon: jump to custom block definition (previously part of “developer tools”)
+    - New addon: remove autocomplete from search bar
+    - The extension popup now remembers the tab that was last selected, instead of defaulting to the messages tab
+    - "Variable manager" addon: list items can now be inserted without holding the Shift key
+    - "Customizable navigation bar" addon: new "compact user dropdown" setting
+    - "Clone counter" addon: new "show icon only" setting
+    - "Confirmations" addon: new "confirm deleting projects" setting
+    - "Customizable new sprite position" addon: new "behavior when duplicating sprites" setting
+    - "Editor dark mode and customizable colors" addon: new customizable block palette opacity ("block palette background" setting now allows a transparency value)
+    - "Cloud games" addon: the cloud games tab can now be opened in a new tab, just like the Scratch Messaging tab
+    - "Cloud games" addon: now highlights the currently open project
+    - "Live forum post preview" addon: new "refresh rate" setting
+    - "Gamepad support" addon: new "reset controls to default" and "clear all controls" buttons
+    - "Customizable block colors": bug fixes, improve compatibility with other addons
+    - "Better emojis" addon: improve performance
+    - "Local timezone on forums": stop using ScratchDB as information source, use mobile forums instead
+    - Bug fix: some editor addons breaking after changing editor language
+    - Bug fix: "auto-hiding block palette" hiding the sprite direction popup
+    - Bug fix: "variable manager" allowing variable names to be empty
+  Highlights:
+    Description: |
+      New addon: "alternating nested block colors", which makes blocks of the same category alternate between lighter and darker shades when nested inside each other (zebra striping). Go to Scratch Addons settings to enable it.
+
+      The "editor find bar" and "jump to custom block definition" addons, previously part of the "developer tools" addon, can now be toggled separately.
+    YouTubeID: e_70jvFOmfI
+
+- Version: v1.29.0
+  Index: 72
+  Tag: v1.29.0
+  Name: v1.29.0
+  Date: 2022-10-26
+  Status: Released
+  Entry: |
+    - New addon: opacity slider [beta]
+    - New addon: project volume slider
+    - New addon: rename broadcasts
+    - New addon: select stage colors in the costume editor
+    - New "show addon names and descriptions in English" toggle for users that haven't set English as their default browser language (available inside “more settings” in the settings page)
+    - "Line breaks in comments" addon: new "add scroll bars to tall comments" and "maximum number of lines" settings
+    - "Hide projects stats" addon: new "show stats on my own project pages" setting and My Stuff page support
+    - "Customizable block colors" addon: new "comments" color setting
+    - "ocular integration" addon: new "show statuses everywhere/only on other's profiles" setting
+    - "Scratch Messaging" addon: support Ctrl+Enter to post comments
+    - "Profile statistics" addon: fix bugs, enhance dark mode support
+    - "TurboWarp button" addon: add ability to customize TurboWarp settings in "replace player" mode
+    - Bug fix: "shared/edited dates tooltip" sometimes not working
+    - Bug fix: "duplicate script with Alt key" leaving the original block detached from the script after duplicating
+    - Bug fix: "infinite scrolling" misplacing forum posts
+    - Bug fix: "developer tools" add block by name popup lacking colored block backgrounds if other addons disabled
+    - Bug fix: "editor dark mode and customizable colors" incorrectly colors right click context menu text in light themes
+  Highlights:
+    Description: |
+      New addon: "opacity slider", which adds an opacity slider to the costume editor color picker. Go to Scratch Addons settings to enable it.
+
+      Other new addons added this update are "project volume slider", "rename broadcasts", and "select stage colors in the costume editor".
+    YouTubeID: OCaaH-TtQB0
+
+- Version: v1.30.0
+  Index: 73
+  Tag: v1.30.0
+  Name: v1.30.0
+  Date: 2023-01-06
+  Status: Released
+  Entry: |
+    - New addon: "costume editor snapping"
+    - New addon: "collapsing sprite properties" [recommended]
+    - New addon: "insert blocks by name" (previously part of "developer tools")
+    - New addon: "always show number pad"
+    - "Auto-hiding block palette" and "customizable code area zoom" addons: changed speed settings
+    - "Website dark mode and customizable colors" addon: support upcoming "Scratch Link" website page
+    - "Block switching" addon: removed unnecessary "add border" setting
+    - "TurboWarp button" addon: player now respects full screen background color settings
+    - The "pause button" addon is now enabled by default for new users
+    - Bug fix: right click context menu items hidden behind stage ("sprite folders", "auto-hiding block palette" and "HD image uploads" addons)
+    - Bug fix: "website dark mode and customizable colors" causing text to be unreadable in some parts of the Scratch website
+    - Bug fix: "ocular integration" status overflow covering part of forum posts
+    - Bug fix: "TurboWarp button" player crashing in certain situations
+    - Bug fix: "TurboWarp button" player stage header white in dark mode
+    - Bug fix: "debugger" blocks untranslated in threads tab
+    - Bug fix: Firefox applying dark mode in "Contact Us" form on the Scratch website
+    - Bug fix: "customizable block colors" and "3.0 Scratchblocks on forums" not working on all forum pages
+    - Bug fix: "customizable navigation bar" compact user dropdown setting not working on the My Stuff page
+    - Bug fix: "HD image uploads" button not showing in "add backdrop" dropdown
+    - Bug fix: "volume slider" resets volume when entering editor
+    - Bug fix: "developer tools" not considering certain unusual types of broadcasts
+    - Bug fix: "enhanced full screen" blurry when resizing the window
+    - Bug fix: "editor dark mode and customizable colors" using incorrect text colors for the project title and remix button
+    - Bug fix: "high resolution thumbnails" should ignore images inside forum posts
+    - Bug fix: "hide delete button" not working for sounds
+    - Bug fix: "customizable block colors" preventing variable monitors from showing
+    - Bug fix: "editor find bar" Ctrl+Left and Ctrl+Right shortcuts not working properly after leaving and entering the editor
+    - Scratch Addons is no longer incompatible with the "Redux DevTools" browser extension
+  Highlights:
+    Description: |
+      New addon: "costume editor snapping", which lets you snap objects in the costume editor to bounding boxes and vector nodes. Go to Scratch Addons settings to enable it.
+
+      Other new addons added this update are "collapsing sprite properties", "insert blocks by name", and "always show number pad".
+    YouTubeID: oRo0tMWEpiA
+  Links:
+    - StringKey: ChangelogPage.Links.BlogPost
+      Link: /blog/v1-30-is-here/
+
+- Version: v1.30.1
+  Index: 74
+  Tag: v1.30.1
+  Name: v1.30.1
+  Date: 2023-01-19
+  Status: Released
+  Entry: |
+    - "Alternating nested block colors" addon: alternate blocks of same color even if their categories are different
+    - "Insert blocks by name" addon: fix mistake in addon description, the correct hotkey is Shift+Click
+    - "Variable manager" addon: require a click to display long variable values
+    - "Project progress bar" addon: improve design
+    - Bug fix: "enhanced full screen" causing stage to be white after seeing inside
+    - Bug fix: "project volume slider" doesn't show real volume
+    - Bug fix: "opacity slider" cannot be moved by clicking or touching the slider
+    - Bug fix: "collapsing sprite properties" not animating if "file drag and drop" is enabled
+    - Bug fix: "collapsing sprite properties" not working properly in some languages
+    - Bug fix: "collapsing sprite properties" not fully compatible with "sprite folders" addon
+    - Bug fix: "gamepad support" controls reset after unplugging controller
+    - Bug fix: "costume editor snapping" breaking reshape tool
+    - Bug fix: "searchable dropdowns" can create variables with the same name as existing ones
+    - Bug fix: "Scratch Messaging" comment post dates "time ago" text not localized to other languages
+    - Bug fix: "clone counter" can show a negative number of clones when dynamically enabled
+
+- Version: v1.30.2
+  Index: 75
+  Tag: v1.30.2
+  Name: v1.30.2
+  Date: 2023-02-06
+  Status: Released
+  Entry: |
+    - "Website dark mode and customizable colors" addon: fix compatibility with new project page love and favorite icons
+    - The "mute" functionality (available when right clicking the extension icon) is now called "do not disturb"
+    - "Costume editor snapping" addon: do not disable vanilla Scratch's "snap to center" when toggling magnet button
+    - "Editor find bar" addon: remove unnecessary "find" label next to the find bar
+    - "Customizable block colors" addon: various changes related to the upcoming new Scratch block colors
+    - "Editor dark mode and customizable colors" addon: change color of extension icons, such as music and video sensing
+    - "Project video recorder" addon: rename "start recording" button to "record"
+    - Bug fix: "collapsing sprite properties" not compatible with "search sprites by name"
+    - Bug fix: "website dark mode and customizable colors" and "Scratch 2.0 → 3.0" causing all closed sticky topic icons on the forums to be blue
+    - Bug fix: "more items per row" slightly changing height of rows on default addon settings
+
+- Version: v1.31.0
+  Index: 76
+  Tag: v1.31.0
+  Name: v1.31.0
+  Date: 2023-03-13
+  Status: Released
+  Entry: |
+    - New addon: multiple rows in backpack
+    - New addon: copy reporter values
+    - New addon: share through My Stuff
+    - The "insert blocks by name" addon was completely reworked, you can now type inputs and reporters inside other blocks, and autocomplete using the Tab key
+    - "Customizable block colors" addon: two new presets have been added, including a preset for the new high-contrast block colors coming to Scratch soon
+    - "Clone counter" addon: new "show on project page" setting
+    - "Website dark mode and customizable colors" addon: support the new Explore page tabs
+    - "Website dark mode and customizable colors" addon: the "navigation bar background" color setting now accepts transparency
+    - "Block switching" addon: more blocks can now be switched to related ones, such as "delete item of list" to "delete all of list"
+    - Bug fix: dropping a sound to sprite folders crashes editor
+    - Bug fix: compatibility issues between "better forum quoter" and "quote post number"
+  Highlights:
+    Description: |
+      The "insert blocks by name" addon was completely reworked. You can now type inputs and reporters inside other blocks, and autocomplete using the Tab key. Go to Scratch Addons settings to enable it.
+
+      The new addons added this update are "multiple rows in backpack", "copy reporter values", and "share through My Stuff".
+
+- Version: v1.31.1
+  Index: 77
+  Tag: v1.31.1
+  Name: v1.31.1
+  Date: 2023-03-30
+  Status: Released
+  Entry: |
+    - Adapt addons to the upcoming Scratch April Fools update
+    - "Insert blocks by name" addon: improve algorithm when searching
+    - "Search profile" addon: improve profile icon to match Scratch UI
+    - Bug fix: layout issue when clicking in sprite name within "debugger" while on "variable manager" tab
+    - Bug fix: "customizable block colors" hiding dropdown arrows in blocks
+    - Bug fix: "Scratch 2.0 → 3.0" account menu can overflow in some languages
+    - Bug fix: "search on My Stuff" forcing page to scroll to the top
+
+- Version: v1.31.2
+  Index: 78
+  Tag: v1.31.2
+  Name: v1.31.2
+  Date: 2023-04-05
+  Status: Released
+  Entry: |
+    - Bug fix: some addons not working after Scratch April Fools ended
+
+- Version: v1.32.0
+  Index: 79
+  Tag: v1.32.0
+  Name: v1.32.0
+  Date: 2023-05-16
+  Status: Released
+  Entry: |
+    - New addon: faster project loading [recommended]
+    - New addon: move sprite to front layer
+    - New addon: follow topics after posting [forums]
+    - New addon: necropost highlighter [forums]
+    - New addon: remember collapsed forum categories [forums]
+    - "Project volume slider" addon: new "always show slider" setting
+    - "Customizable navigation bar" addon: new "stick to" setting
+    - "Show user IDs" addon: new "only show when hovering over username" setting
+    - "Editor dark mode and customizable colors" addon: new "popup backdrop color" setting
+    - "Website dark mode and customizable colors" addon: turn forum toolbar icons white in dark mode
+    - "Customizable block colors": changes to the black text color option and the "black" preset
+    - "TurboWarp player" addon: you can now Ctrl+Click the TurboWarp icon to open in a new tab
+    - "Hex color picker" addon: various bug fixes
+    - Bug fix: incorrectly styled Projects/Studios/Profile buttons on search
+    - Bug fix: random layout issues in extension popup (Chrome and Edge)
+    - Bug fix: "message filters" requesting messages from server too often
+  Highlights:
+    Description: |
+      New addon: "move sprite to front layer", which lets you Shift+Click a sprite within the sprite pane to move it to the front (top layer) of the stage. Go to Scratch Addons settings to enable it.
+
+      Other new addons added this update are "faster project loading", "follow topics after posting", "necropost highlighter", and "remember collapsed forum categories".
+  Links:
+    - StringKey: ChangelogPage.Links.BlogPost
+      Link: /blog/v1-32-released/
+
+- Version: v1.32.1
+  Index: 80
+  Tag: v1.32.1
+  Name: v1.32.1
+  Date: 2023-05-18
+  Status: Released
+  Entry: |
+    - Bug fix: "faster project loading" breaking dragging sprites from backpack
+    - Bug fix: "project volume slider" not compatible with "reverse order of project controls" and RTL languages
+
+- Version: v1.33.0
+  Index: 81
+  Tag: v1.33.0
+  Name: v1.33.0
+  Date: 2023-06-16
+  Status: Released
+  Entry: |
+    - New addon: highlight project creator in comments
+    - Adapt multiple addons to the upcoming Scratch editor update
+    - Increase available storage for addon settings from 8kB to ~20kB
+    - Change extension behavior that impacted Scratch project player performance
+    - "Pause button" addon: projects can now be paused with Alt+X
+    - "Live featured project" addon: new "use Scratch username" setting and bug fixes
+    - "Debugger" addon: new "fill and animate graphs" setting
+    - Bug fix: "remix tree" button showing twice
+    - Bug fix: "collapsing sprite properties" automatically collapsing when changing direction through dial
+    - Bug fix: "customizable navigation bar" duplicates username when changing settings
+    - Bug fix: "customizable code area zoom" doesn't react to changing editor language
+    - Bug fix: "project volume slider" interface interfering with "turbo mode" indicator
+  Highlights:
+    Description: |
+      New addon: "highlight project creator in comments", which adds a badge next to the project creator in project comments sections. Go to Scratch Addons settings to enable it.
+
+      Multiple addons have been adjusted in preparation for the upcoming Scratch changes. This update also brings performance and stability improvements.
+  Links:
+    - StringKey: ChangelogPage.Links.BlogPost
+      Link: /blog/v1-33-released/
+
+- Version: v1.33.1
+  Index: 82
+  Tag: v1.33.1
+  Name: v1.33.1
+  Date: 2023-06-18
+  Status: Released
+  Entry: |
+    - Bug fix: "customizable block colors" causing the project editor to crash when attempting to create a custom block
+    - Bug fix: "confirmations" addon not properly prompting to confirm project sharing
+    - Bug fix: "highlight project creator in comments" not properly highlighting the original poster in forums
+
+- Version: v1.33.2
+  Index: 83
+  Tag: v1.33.2
+  Name: v1.33.2
+  Date: 2023-06-28
+  Status: Released
+  Entry: |
+    - "Editor dark mode and customizable colors" addon: presets now use Scratch's new purple accent color
+    - "Editor dark mode and customizable colors" addon: new "3.Darker (blue)" and "Scratch's default colors (blue)" presets
+    - "Website dark mode and customizable colors" addon: presets now use Scratch's new purple accent color
+    - "Editor dark mode and customizable colors" addon: new "Experimental Dark (blue)" and "Scratch's default colors (blue)" presets
+    - Adapt multiple addons to the Scratch colors update
+    - "Customizable block colors" addon: various bug fixes
+    - Added warning before mentioning "Scratch Addons" on the Scratch forums, not just when posting comments
+  Highlights:
+    Description: |
+      Scratch just released an update that changes some of the colors around the website. If you'd like to update your settings to use these new colors, go back, or otherwise customize the colors, you can reset or change any themes from Scratch Addons settings.
+
+      Scratch Addons' developers have been working hard to support the changes, but you might still experience small bugs for some time.
+
+- Version: v1.33.3
+  Index: 84
+  Tag: v1.33.3
+  Name: v1.33.3
+  Date: 2023-07-04
+  Status: Released
+  Entry: |
+    - "Editor dark mode and customizable colors" addon: buttons on the costume editor are no longer blue, now respects "text and icon highlight color" setting
+    - "Editor dark mode and customizable colors" addon: various bug fixes
+    - "Website dark mode and customizable colors" addon: now uses a darker blue on Scratch 2.0 pages if the "Scratch default colors (blue)" preset is selected
+    - "Website dark mode and customizable colors" addon: various bug fixes
+    - Bug fix: "hide Tutorials button" not working properly and breaking "project video recorder"
+    - Bug fix: "costume editor snapping" snapping to center even if setting disabled
+    - Bug fix: "mouse position display", "clone counter" and others not showing in full screen if small stage selected
+
+- Version: v1.34.0
+  Index: 85
+  Tag: v1.34.0
+  Name: v1.34.0
+  Date: 2023-08-17
+  Status: Released
+  Entry: |
+    - New addon: arrow key incrementation in editor
+    - New addon: compact editor
+    - New addon: forum post cooldown display
+    - "Non-draggable sprites in editor" addon: new "allow dragging while project is stopped" setting
+    - "Website dark mode and customizable colors" addon: new message count color settings
+    - "Website dark mode and customizable colors" addon: new Scratch 2.0 presets
+    - "Compact messages" addon: new "remove borders" setting
+    - "60FPS project player mode" addon: new accessible green flag indicator when 60FPS is enabled
+    - "Infinite scrolling" addon: the "fix footer" setting was removed
+    - "Ctrl+Enter to post" addon: add support for forums reporting form
+    - Bug fix: "customizable block colors" not working properly in older browsers
+    - Bug fix: "HD image uploads" breaking drag-and-drop of sprite3 files
+  Highlights:
+    Description: |
+      New addon: "arrow key incrementation in editor", which lets you use the up and down arrow keys to increase or decrease number values in block inputs. Go to Scratch Addons settings to enable it.
+
+      Another new addon is the "compact editor" theme, which decreases the size of buttons, input fields, the menu bar, and other elements in the editor, making more space for components such as the code area, the costume editor, and costume previews, as was the case in Scratch 2.0.
+    YouTubeID: sn3uURLEVh8
+  Links:
+    - StringKey: ChangelogPage.Links.BlogPost
+      Link: /blog/v1-34-released/
+
+- Version: v1.34.1
+  Index: 86
+  Tag: v1.34.1
+  Name: v1.34.1
+  Date: 2023-08-22
+  Status: Released
+  Entry: |
+    - Bug fix: "compact editor" making number inputs too narrow
+    - Bug fix: "compact editor" not properly shrinking the sprite properties in some languages
+    - Bug fix: "expandable search bar" not styling properly when search bar expanded if "Scratch 2.0 → 3.0" enabled
+
+- Version: v1.35.0
+  Index: 87
+  Tag: v1.35.0
+  Name: v1.35.0
+  Date: 2023-10-13
+  Status: Released
+  Entry: |
+    - New addon: skewing in costume editor
+    - New addon: preview project instructions and notes [beta]
+    - New addon: point towards random direction block
+    - New addon: sticky footer (previously part of "infinite scrolling")
+    - Scratch Addons now shows an error page if settings storage is failing
+    - "Scratch Messaging" addon: enhanced loading times
+    - "Customizable block text style" addon: new "text size" setting
+    - "Fix sprite pane glitching" addon: it is now optional to disable sprite wobble
+    - "Project video recorder" addon: increased maximum recording time to 10 minutes
+    - "Arrow key incrementation in editor" addon: now supports more number fields and allows for custom values
+    - "Insert blocks by name" addon: fixed multiple bugs, enhanced performance and autocomplete
+    - "Username search" addon: now shows the user's profile picture
+    - "Customizable block text style" addon: general fixes
+    - "Scratch 2.0 → 3.0" addon: improved the look of tabs on the My Stuff page
+    - "TurboWarp button" addon: improved button contrast
+    - "Website dark mode and customizable colors" addon: better support for Scratch statistics page
+    - "Old studio layout" addon: no longer changes the aspect ratio of studio thumbnails
+    - Bug fix: "auto-hiding block palette" deleting blocks unexpectedly when dropping them close to the border
+    - Bug fix: "save blocks as image" cropping define blocks incorrectly
+    - Bug fix: sprite pane not using all available space if both "compact editor" and "collapsing sprite properties" enabled
+    - Bug fix: untranslated text in the Scratch editor menu bar if "customizable block colors" enabled
+    - Bug fix: "editor dark mode and customizable colors" showing incorrect icons in the costume editor
+    - Bug fix: "confirmations" recognizing the "choose a tutorial" button as a Share button
+    - Bug fix: "better forum quoter" sometimes quoting image URLs incorrectly
+  Highlights:
+    Description: |
+      New addon: "skewing in costume editor", which lets you hold Ctrl while scaling an object on its sides to skew it. Go to Scratch Addons settings to enable it.
+      
+      Another new addon is "preview project instructions and notes", which in your own projects, adds a toggle above the Instructions field to preview the project instructions and notes as seen by other users.
+  Links:
+    - StringKey: ChangelogPage.Links.BlogPost
+      Link: /blog/v1-35-released/
+
+- Version: v1.35.1
+  Index: 88
+  Tag: v1.35.1
+  Name: v1.35.1
+  Date: 2023-10-19
+  Status: Released
+  Entry: |
+    - Bug fix: "Scratch Messaging" showing read messages as if they were unread
+    - Bug fix: "ocular integration" not working properly on forums
+    - Bug fix: new "username search" profile picture showing as white if "website dark mode" enabled
+
+- Version: v1.36.0
+  Index: 89
+  Tag: v1.36.0
+  Name: v1.36.0
+  Date: 2024-02-19
+  Status: Released
+  Entry: |
+    - New addon: "customizable menu bar" (replaces "hide Tutorials button")
+    - New addon: "place backpack code at mouse"
+    - New addon: "rearrangeable custom block inputs"
+    - New addon: "square block text inputs"
+    - Increased contrast of some settings page interface elements
+    - "Infinite scrolling" addon: new "search and explore" setting
+    - "Auto-hiding block palette" addon: new "open by default" setting
+    - "Enhanced full screen" addon: new "show toolbar when hovered" setting
+    - "Customizable block colors" addon: new "change the colors of variables and lists on the stage" setting
+    - "Preview project instructions and notes" addon: new reliable implementation, no longer experimental
+    - "Save blocks as image" addon: added support for high contrast blocks
+    - "Colored context menus" addon: text is now readable when right-clicking high contrast blocks
+    - "Customizable link style" addon: settings were clarified, bold setting is now separate
+    - "Ctrl+Enter to post" addon: now works when creating a new forum topic
+    - "Confirmations" addon: more cases now handled by "confirm cancelling comments" setting
+    - "Gamepad support" addon: now supports Firefox on Linux
+    - "Better forum quoter" addon: fixed bugs
+    - Bug fix: website addons not matching the language used by Scratch
+    - Bug fix: "faster project loading" breaking drag-and-dropping of backpack code into sprite pane
+    - Bug fix: "compact editor" not leaving enough room for backpack when on costumes tab
+    - Bug fix: "Report" and "Delete" buttons displayed above "emoji picker for comments"
+    - Bug fix: "sprite folders" duplicating folders when duplicating a sprite
+    - Bug fix: "insert blocks by name" showing outside the editor when pressing Ctrl+Space
+    - Bug fix: incompatibilities between "sticky footer" and "old studio layout"
+  Highlights:
+    Description: |
+      New addon: "rearrangeable custom block inputs", which allows rearranging custom block parameters on the "Make a block" screen. Go to Scratch Addons settings to enable it.
+      
+      Other new addons added this update are "customizable menu bar", "place backpack code at mouse", and "square block text inputs".
+  Links:
+    - StringKey: ChangelogPage.Links.BlogPost
+      Link: /blog/v1-36-released/
+
+- Version: v1.37.0
+  Index: 90
+  Tag: v1.37.0
+  Name: v1.37.0
+  Date: 2024-03-29
+  Status: Released
+  Entry: |
+    - New addon: larger "Save Now" button [recommended]
+    - New addon: project page download button
+    - New addon: replace backpack bar with button
+    - Scratch Addons minimum browser requirements changed to: Chrome 96+, Firefox 109+
+    - Scratch Addons now allows exporting settings even if the browser is unsupported
+    - Adapt and disable some addons for the upcoming Scratch April Fools editor
+    - "Square block inputs" addon: new "number inputs" setting
+    - "Rearrangeable custom block inputs" addon: new "insert new inputs after selected input" setting
+    - "Project video recorder" addon: default video file name to project title
+    - "Full areas" addon: forum signatures no longer have a minimum height
+    - "Debugger" addon: the addon's thread list now automatically scrolls when single stepping
+    - Bug fix: "enhanced full screen" hovering not detected on Firefox
+    - Bug fix: "website dark mode and customizable colors" not working properly when reporting a profile
+    - Bug fix: "website dark mode and customizable colors" inconsistently affecting forum post previews
+    - Bug fix: "pause button" Alt+X shortcut deleting the most recently focused block
+    - Bug fix: compatibility issues between "customizable block colors" and "always show number pad"
+    - Bug fix: "auto-hiding block palette" shrinking the width of the code area by 250 pixels, causing issues in small screens
+    - Bug fix: project unpauses after opening sound library ("pause button" addon)
+  Highlights:
+    Description: |
+      New addon: "project page download button", which allows you to download projects directly from the project page, without having to open the editor first. Go to Scratch Addons settings to enable it.
+      
+      Other new addons added this update are "larger Save Now button", and "replace backpack bar with button".
+  Links:
+    - StringKey: ChangelogPage.Links.BlogPost
+      Link: /blog/v1-37-released/
+
+- Version: v1.37.1
+  Index: 91
+  Tag: v1.37.1
+  Name: v1.37.1
+  Date: 2024-04-04
+  Status: Released
+  Entry: |
+    - Bug fix: some addons not working after Scratch April Fools ended
+
+- Version: v1.38.0
+  Index: 92
+  Tag: v1.38.0
+  Name: v1.38.0
+  Date: 2024-05-14
+  Status: Released
+  Entry: |
+    - Various changes to support Manifest V3, the new extension architecture required by browsers
+    - "Editor dark mode and customizable colors" addon: now styles alerts (such as "project could not save")
+    - Bug fix: "enhanced full screen" causing stage to become blurry
+  Highlights:
+    Description: |
+      This is an experimental update that we're releasing to a portion of our user base. It contains some behind-the-scenes changes to support the new extension architecture required by browsers (Manifest V3). If you encounter any issues or unexpected behavior, please send feedback. There is also a button to send feedback in the settings page.
+      
+      This update doesn't introduce any new features, but stay tuned for upcoming updates.
+
+- Version: v1.38.1
+  Index: 93
+  Tag: v1.38.1
+  Name: v1.38.1
+  Date: 2024-05-30
+  Status: Released
+  Entry: |
+    - Added small speed-up for website dark mode and other themes
+    - Bug fix: extension broken on Firefox for Android
+
+- Version: v1.38.2
+  Index: 94
+  Tag: v1.38.2
+  Name: v1.38.2
+  Date: 2024-06-01
+  Status: Released
+  Entry: |
+    - Bug fix: addons not working
+
+- Version: v1.38.3
+  Index: 95
+  Tag: v1.38.3
+  Name: v1.38.3
+  Date: 2024-07-15
+  Status: Released
+  Entry: |
+    - "Scratch Messaging" addon: message count is now requested less often when not using Scratch
+    - "Show exact count" addon: the exact project count in studios now requires a click to calculate
+
+- Version: v1.38.4
+  Index: 96
+  Tag: v1.38.4
+  Name: v1.38.4
+  Date: 2024-07-16
+  Status: Released
+  Entry: |
+    - Bug fix: extension not reacting to logging in or out of Scratch
+
+- Version: v1.38.5
+  Index: 97
+  Tag: v1.38.5
+  Name: v1.38.5
+  Date: 2024-07-23
+  Status: Released
+  Entry: |
+    - "Show exact count" addon: removed profile exact counts for favorites, curated studios and followed studios (send us feedback if you were using this, we may add them back!)
+    - "Forum post cooldown display" addon: optimized to avoid extra request to Scratch servers
+
+- Version: v1.39.0
+  Index: 98
+  Tag: v1.39.0
+  Name: v1.39.0
+  Date: 2024-08-27
+  Status: Released
+  Entry: |
+    - New addon: asset conflict dialog
+    - New addon: delete other costumes or sounds
+    - New addon: customizable code editor grid
+    - New addon: customizable stage monitors
+    - New addon: remaining reply count
+    - "Customizable block colors" addon: new insertion marker customization settings
+    - "Project video recorder" addon: reorganized modal and now remembers settings from last recording
+    - "Message count on extension icon" addon: disabled automatically for everyone without the extension pinned
+    - "ocular integration" addon: use newer purple accent color instead of old blue
+    - "Gamepad support" addon: added support for dark mode in the gamepad settings panel
+    - "Compact editor" addon: costume numbers in the costumes tab are now easier to read
+    - "Scratch Messaging" addon: shows comment previews even if they aren't found
+    - "Scratch Messaging" addon: in the "studio activity" category, shows the number of messages instead of the studio amount
+    - "Editor find bar" addon: fixed Ctrl+Z undoing what was typed in the find bar (Chrome/Edge only)
+    - "Forum search" addon: it is now functional again thanks to a new ScratchDB utility
+    - Bug fix: "auto-hiding block palette" closing the palette while a block dropdown is open or editing an input
+    - Bug fix: "HD image uploads" not discarding EXIF metadata before uploading files
+    - Bug fix: sprite pane not using all available space if “compact editor” enabled and “collapsing sprite properties” uncollapsed
+    - Bug fix: "rearrangeable custom block inputs" not working with empty labels
+    - Bug fix: "costume editor snapping" not enforcing minimum and maximum values for "snapping distance" setting
+    - Bug fix: "cat blocks" setting "watch mouse cursor" not working for newly loaded extensions (e.g. Makey Makey)
+    - Bug fix: "customizable block colors" not reacting to any setting changes after creating a custom block
+    - Bug fix: "editor find bar" doing case-sensitive broadcast search
+    - Bug fix: "editor find bar" preventing Ctrl+F from opening browser find outside of the project editor
+    - Bug fix: "two-column category menu" scrolls up instead of down when clicking in the space below the scrollbar
+    - Bug fix: "data category tweaks" causing "Save now" button to always show even if no changes were made
+    - Bug fix: "save blocks as image" being slow due to requesting the same image multiple times from Scratch servers
+    - Bug fix: incompatibilities between “project progress bar” and “faster project loading”
+    - Bug fix: the color scheme of stage monitors (e.g. variable sliders) were controlled by website dark mode instead of editor's
+    - Bug fix: number pad and other editor interface elements showing above modals and popups
+    - Removed addon "profile statistics"
+    - Removed addon "local timezone on forums"
+    - Removed addon "forums image uploader"
+  Highlights:
+    Description: |
+      New addon: "delete other costumes or sounds", which adds an option to the right click context menu for costumes and sounds to delete all items except for the selected one. Go to Scratch Addons settings to enable it.
+      
+      Other new addons added this update are "asset conflict dialog", "customizable code editor grid", "customizable stage monitors", and "remaining reply counter".
+    YouTubeID: CrYn2LWgUcE
+
+- Version: v1.39.1
+  Index: 99
+  Tag: v1.39.1
+  Name: v1.39.1
+  Date: 2024-08-28
+  Status: Released
+  Entry: |
+    - Bug fix: extension broken on Firefox
+
+- Version: v1.39.2
+  Index: 100
+  Tag: v1.39.2
+  Name: v1.39.2
+  Date: 2024-11-09
+  Status: Released
+  Entry: |
+    - Bug fix: "sprite folders" not working after Scratch update
+    - Bug fix: native sprite delete confirmation not showing if "display stage on left side" enabled
+    - Bug fix: "HD image uploads" and "echo effect button" layout issues
+    - "Project video recorder" addon: now downloads videos as mp4 in Chrome-based browsers, instead of webm
+    - "Editor dark mode and customizable colors" addon: fixed support for new Scratch editor features
+    - "Better forum quoter" and "forum search" addons: fixed support for native 3.0 forum blocks
+    - Removed addon "sprite deletion confirmation" (it was added officially by Scratch to the editor)
+    - Removed addon "Scratch 3.0 forum blocks" (it was added officially by Scratch to the forums)
+
+- Version: v1.40.0
+  Index: 101
+  Tag: v1.40.0
+  Name: v1.40.0
+  Date: 2024-12-20
+  Status: Released
+  Entry: |
+    - New addon: delete sprites without confirmation
+    - New addon: show project thumbnail while loading
+    - New addon: modify version information on forums
+    - New tab layout for the extension popup
+    - "Customizable editor menu bar" addon: new "hide debug button" setting
+    - "Save blocks as image" addon: new user interface and ability to copy the image to the clipboard
+    - "Sprite pane search" addon: the search bar now takes less space and is located below the sprite list
+    - "Customizable block colors" addon: settings now apply properly in the "Make a Block" popup
+    - "Message count on extension icon" addon: added rounding for big message count numbers
+    - "Debugger" addon: better chart colors and dark mode support
+    - Bug fix: "website dark mode and customizable colors" support for new pages (Community Guidelines, Ideas, etc.)
+    - Bug fix: "website dark mode and customizable colors" support for completely removing borders without affecting UI separators
+    - Bug fix: "save blocks as image" not compatible with "customizable block text style"
+    - Bug fix: "auto-hide block palette" sometimes hides automatically when changing sprites
+    - Bug fix: "copy link to comment button" slowing down the page if there are many comments
+    - Bug fix: "customizable block colors" not changing the color of list items consistently
+    - Bug fix: "Ctrl+Enter to post" submitting the wrong comment if clicked Reply in more than one comment
+    - Bug fix: "editor find bar" assuming the top hit is the first even if it's not
+    - Bug fix: "editor dark mode and customizable colors" cannot change some UI elements that use purple
+    - Bug fix: "editor dark mode and customizable colors" coloring costume editor actions incorrectly after changing zoom
+    - Bug fix: "remix tree button" and "project page download button" disappear after resizing the window
+    - Bug fix: multiple Scratch editor addons now use better icons and colors
+    - Adapt multiple editor addons for upcoming Scratch updates
+  Highlights:
+    Description: |
+      New addon: "delete sprites without confirmation", which removes the new confirmation prompt that asks if you are sure you want to delete a sprite. Go to Scratch Addons settings to enable it.
+      
+      The "save blocks as image" addon now allows copying the images directly to the clipboard. Also, the "project video recorder" now exports mp4 files if supported by the browser.
+    YouTubeID: bRop52u6LWs

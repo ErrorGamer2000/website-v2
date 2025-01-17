@@ -1,3 +1,7 @@
+/**
+ * Set the inner HTML of the Smart 404 status.
+ * @param {string} html HTML of the message
+ */
 let smart404Status = html => {
 	if (document.querySelector("#smart-404 p")) document.querySelector("#smart-404 p").innerHTML = html
 	else $(() => {
@@ -9,6 +13,11 @@ const regex = {
 	langFromPath: /^\/([a-z0-9]{2,3}(?:-[a-z0-9]{2,10})*)(?=\/)/
 }
 
+/**
+ * Get the display name of a language
+ * @param {string} languageCode Code of the language
+ * @returns Display name of the language
+ */
 const getLanguageDisplayName = languageCode => {
 	try {
 		let intlObjEn = new Intl.DisplayNames(["en"], {type: 'language'})
@@ -31,6 +40,7 @@ const redirectLanguages = {
 	if (pathName === "/404" || pathName === "/404.html") {
 		smart404Status("No suggestions since you are looking for the 404 page.")
 		return
+		
 	}
 
 	try {
@@ -46,6 +56,13 @@ const redirectLanguages = {
  			pages[langCode].push(path)
 		})
 
+
+		// Try to do a redirect first.
+		/**
+		 * Get a redirect based on the path and the chosen language
+		 * @param {string} langCode Code of the language
+		 * @returns An array with the page path and the display name of the language.
+		 */
 		const interLanguageRedirect = langCode => {
 			let toCheck = pathName
 			toCheck = toCheck.replace(regex.langFromPath, "")
@@ -77,6 +94,7 @@ const redirectLanguages = {
 			}
 		}
 		
+		// Get best match and suggest to the user.
 		let { bestMatch } = stringSimilarity.findBestMatch(pathName, Object.values(pages).flat())
 		smart404Status(`Did you mean <a href="${bestMatch.target}">${bestMatch.target}</a>?`)
 

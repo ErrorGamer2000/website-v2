@@ -1,0 +1,32 @@
+{{ define "header" -}}
+
+	{{ if .Scratch.Get "data" -}}
+
+		{{ $data := ( .Scratch.Get "data" ) -}}
+		<h1>{{ $data.name }}</h1>
+
+	{{ else -}}
+
+		<h1>{{ .Title }}</h1>
+
+	{{ end -}}
+
+{{ end }}	
+
+{{ define "content" }}
+
+	{{ if .Params.id }}
+		{{ $data := ( index ( where ( index $.Site.Data.addons $.Page.Language.Lang ) "id" .Params.id ) 0 ) }}
+
+		{{ partial "docs/addons-infobox" $data }}
+	{{ end }}
+
+	{{ .Content }}	
+
+{{ end }}
+
+{{ define "head-additional" }}
+
+	{{ partial "scss" "assets/css/markdown.scss" }}
+
+{{ end }}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+{{- partial "head" . -}}
+
+</head>
+
+<body>
+
+{{- partial "nav" . -}}
+
+{{ $style := resources.Get "assets/css/markdown.scss" | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+<main>
+
+    {{ block "main" . }}{{ end }}
+
+</main>
+
+{{- partial "footer" . -}}
+
+</body>
+
+</html>
+
+{{ define "main" }}
+
+	<article class="md-content">
+
+		{{ block "article" . }}{{ end }}
+				
+	</article>	
+
+{{ end }}

@@ -5,6 +5,7 @@ description: This page informs you of our policies regarding the collection, use
 aliases:
   - /docs/privacy/policies/website
   - /privacy/website
+no_comments: true
 ---
 
 > Last updated: 28 May 2021
